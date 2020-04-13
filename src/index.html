@@ -1,14 +1,84 @@
 <!DOCTYPE html>
 <html>
+
   <head>
+
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+
+    <title>Cipher Messenger</title>
+
     <link rel="stylesheet" href="style.css" />
+    
   </head>
+
   <body>
-    <div id="root">
-      <h1>Hello world!</h1>
-    </div>
+    <header class= "header">
+        <!--<div name>
+          <h1>Cipher Mensseger</h1>
+        </div>-->
+        <img src=" https://www.freelogodesign.org/download/file?id=6860c6ed-a890-4cd8-9834-9c309b551b22_200x200.png  ">
+        <nav>
+          <ul class = "menu">
+            <li><a href= "">Cipher Messenge</a></li>  
+            <li><a href= "">Sobre</a></li>
+            <li><a href="">Instruções</a></li>
+          </ul>
+        </nav>
+  </header>
+
+  <main>
+      <form action = ""  method = "post">
+
+        <section class = "grid1">
+
+          <div>
+            <label for = "offset"></label>
+            <input type = "number" name = "offset" id = "offset" min = "0" max = "99999"
+            required placeholder = "Número"/>
+            <p>Deslocamento</p>
+          </div>
+
+          <div class = "button">
+            <button typer = "button" id = "btnCipher" >Codificar</button> 
+          </div>
+          
+          <div class = "button">
+            <button typer = "button" id = "btnDecipher">Decodificar</button>
+          </div>
+
+        </section> 
+
+        <section class = "flexbox">
+
+          <div class = "text-box">
+            <label for = "write-text">Mensagem</label>
+            <textarea name = "write-text" id = "write-text" rows = "8" cols = "53" 
+            required placeholder = "Insira sua mensagem" ></textarea>
+          </div>   
+
+          <div class = "text-box">
+            <label for = "result">Resultado</label>
+            <textarea name ="result" id = "result" readonly = "true" rows = "8" cols = "53" 
+            placeholder = "Resultado"></textarea>
+          </div>
+
+        </section> 
+
+        <section class = "grid2">
+
+          <div class = "button">
+            <button typer = "button" id = "btnClear">Apagar</button> 
+          </div>
+            
+          <div class = "button">
+            <button typer = "button" id = "btnCopy">Copiar</button>
+          </div>
+        
+        </section>
+          
+      </form>
+  </main>
+
     <script src="index.js" type="module"></script>
   </body>
 </html>
