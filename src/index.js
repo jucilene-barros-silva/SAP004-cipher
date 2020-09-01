@@ -1,11 +1,12 @@
 import cipher from './cipher.js';
 
+
 function parametersEncode (event){
     event.preventDefault();
     let nOffset = document.getElementById("offset").valueAsNumber;
     let message = document.getElementById("write-text").value.toUpperCase();
 
-    document.getElementById("result").innerHTML = cipher.encode(nOffset,message);
+    document.getElementById("result-text").innerHTML = cipher.encode(nOffset,message);
 }
 
 function parametersDecode (event){
@@ -13,28 +14,18 @@ function parametersDecode (event){
     let nOffset = document.getElementById("offset").valueAsNumber;
     let message = document.getElementById("write-text").value.toUpperCase();
 
-    document.getElementById("result").innerHTML = cipher.decode(nOffset,message);
-       
+    document.getElementById("result-text").innerHTML = cipher.decode(nOffset,message);
 }
 
-document.getElementById("btnCipher").addEventListener("click", parametersEncode);
-document.getElementById("btnDecipher").addEventListener("click", parametersDecode);
+document.getElementById("btn-cipher").addEventListener("click", parametersEncode);
+document.getElementById("btn-decipher").addEventListener("click", parametersDecode);
 
-//Função para limpar e copiar não implementada
-/*function clearResult (event){
-    event.preventDefault();
-    let textResult = document.getElementById("result").innerHTML = cipher.decode(nOffset,message);
-    textResult.select();
-    document.execCommand("delete")
-}
+document.getElementById("btn-clear").addEventListener("click",function clear(){
+    document.getElementById("write-text").value = "";
+    const result = document.getElementById("result-text").value = "";
+} );
 
-
-
-function copyResult (event){
-    event.preventDefault();
-    document.getElementById().select();
-    document.execCommand("copy");
-}
-
-document.getElementById("btnClear").addEventListener("click", clearResult);
-document.getElementById("btnCopy").addEventListener("click", copyResult);*/
+document.getElementById("btn-copy").addEventListener("click",function copy(){
+    const Copy = document.getElementById("result-text").select();
+    document.execCommand("Copy");
+});

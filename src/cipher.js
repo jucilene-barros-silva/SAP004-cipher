@@ -1,16 +1,16 @@
 const cipher = {
   encode: function (nOffset, message) {
     if (typeof (nOffset) != typeof (0)) {
-      throw new TypeError();
+      throw new TypeError("Insira um número");
     } else if (typeof (message) != typeof ("a")){
-      throw new TypeError();
+      throw new TypeError("Insira sua mensagem");
     }
   
     let finalResultCipher = ""
 
     for (let i = 0; i <message.length; i++){
-      let codigoDaLetraAscChipher = (((message[i].charCodeAt(0) - 65 + Number(nOffset)) % 26) + 65);
-      let resultCipher = String.fromCharCode(codigoDaLetraAscChipher);
+      const letterCodeAscChipher = (((message[i].charCodeAt(0) - 65 + Number(nOffset)) % 26) + 65);
+      const resultCipher = String.fromCharCode(letterCodeAscChipher);
       finalResultCipher += resultCipher;
     }
 
@@ -22,10 +22,10 @@ const cipher = {
     let finalResultDecipher = ""
 
     for (let i = 0; i <message.length; i++){
-      let codigoDaLetraAscDechipher = (((message[i].charCodeAt(0) - 90 - Number(nOffset)) % 26) + 90);
-      let resultDecipher = String.fromCharCode(codigoDaLetraAscDechipher);
+      const letterCodeAscDechipher = (((message[i].charCodeAt(0) - 90 - Number(nOffset)) % 26) + 90);
+      const resultDecipher = String.fromCharCode(letterCodeAscDechipher);
       finalResultDecipher += resultDecipher;
-          }
+    }
     return finalResultDecipher;
   },
     
