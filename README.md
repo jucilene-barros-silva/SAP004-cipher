@@ -1,6 +1,4 @@
 # Chiper Messenger
-
-# Chiper Messenger
 Uma plataforma onde você pode criar mensagens codificadas.
 # Interface
 Para ter acesso à página web, clique no link abaixo.
