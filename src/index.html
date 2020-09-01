@@ -1,61 +1,80 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Cipher Messenger</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class= "header">
-        <img src=" https://www.freelogodesign.org/download/file?id=6860c6ed-a890-4cd8-9834-9c309b551b22_200x200.png  ">
-        <nav>
-          <ul class = "menu">
-            <li><a href= "#">Cipher Messenger</a></li>  
-            <li><a href= "#">Sobre</a></li>
-            <li><a href="#">Instruções</a></li>
-          </ul>
-        </nav>
+    <header class="header">
+      <img
+        src=" https://www.freelogodesign.org/download/file?id=6860c6ed-a890-4cd8-9834-9c309b551b22_200x200.png  "
+      />
+      <nav>
+        <ul class="menu">
+          <li><a href="#">Cipher Messenger</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Instruções</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-      <form >
-        <section class = "flexbox-container-1">
-          <div class = "offset">
-            <label for = "offset">Deslocamento</label>
-            <input type = "number" name = "offset" id = "offset" min = "0" max = "99999"
-            required placeholder = "Número"/>
+      <form>
+        <section class="flexbox-container-1">
+          <div class="offset">
+            <label for="offset">Deslocamento</label>
+            <input
+              type="number"
+              name="offset"
+              id="offset"
+              min="0"
+              max="99999"
+              required
+              placeholder="Número"
+            />
           </div>
-          <div class = "button">
-            <button typer = "button" id = "btn-cipher" >Codificar</button> 
+          <div class="button">
+            <button typer="button" id="btn-cipher">Codificar</button>
           </div>
-          <div class = "button">
-            <button typer = "button" id = "btn-decipher">Decodificar</button>
+          <div class="button">
+            <button typer="button" id="btn-decipher">Decodificar</button>
           </div>
-        </section> 
-        <section class = "flexbox-container-2">
-          <div class = "text-box" >
-            <label for = "write-text">Mensagem</label>
-            <textarea name = "write-text" id = "write-text" rows = "4" cols = "33" 
-            required placeholder = "Insira sua mensagem" ></textarea>
+        </section>
+        <section class="flexbox-container-2">
+          <div class="text-box">
+            <label for="write-text">Mensagem</label>
+            <textarea
+              name="write-text"
+              id="write-text"
+              rows="4"
+              cols="33"
+              required
+              placeholder="Insira sua mensagem"
+            ></textarea>
           </div>
-          <div class = "text-box">
-            <label for = "result">Resultado</label>
-            <textarea name ="result" id = "result-text" readonly = "true" rows = "4" cols = "33" 
-            placeholder = "Resultado"></textarea>
+          <div class="text-box">
+            <label for="result">Resultado</label>
+            <textarea
+              name="result"
+              id="result-text"
+              readonly="true"
+              rows="4"
+              cols="33"
+              placeholder="Resultado"
+            ></textarea>
           </div>
-        </section> 
-        <section class = "flexbox-container-1">
-          <div class = "button">
-            <button type = "button" id = "btn-clear" value = "clear">Apagar</button> 
+        </section>
+        <section class="flexbox-container-1">
+          <div class="button">
+            <button type="button" id="btn-clear" value="clear">Apagar</button>
           </div>
-          <div class = "button">
-            <button type = "button" id = "btn-copy" value = "copy">Copiar</button>
+          <div class="button">
+            <button type="button" id="btn-copy" value="copy">Copiar</button>
           </div>
         </section>
       </form>
-    </main> 
-    <footer>
-
-    </footer>
+    </main>
+    <footer></footer>
     <script src="index.js" type="module"></script>
   </body>
 </html>
